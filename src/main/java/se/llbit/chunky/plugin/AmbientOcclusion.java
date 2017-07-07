@@ -17,7 +17,6 @@ package se.llbit.chunky.plugin;
 import se.llbit.chunky.Plugin;
 import se.llbit.chunky.main.Chunky;
 import se.llbit.chunky.main.ChunkyOptions;
-import se.llbit.chunky.resources.TexturePackLoader;
 import se.llbit.chunky.ui.ChunkyFx;
 
 import java.io.FileNotFoundException;
@@ -30,8 +29,7 @@ public class AmbientOcclusion implements Plugin {
     chunky.setRayTracerFactory(AmbientOcclusionTracer::new);
   }
 
-  public static void main(String[] args)
-      throws FileNotFoundException, TexturePackLoader.TextureLoadingError {
+  public static void main(String[] args) throws Exception {
     // Start Chunky normally with this plugin attached.
     Chunky.loadDefaultTextures();
     Chunky chunky = new Chunky(ChunkyOptions.getDefaults());
